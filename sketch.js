@@ -3,7 +3,6 @@ let grass = [];
 const MAX_GRASS = 300;
 let canva;
 
-//创建画布，宽度和高度都是浏览器窗口的 50%。
 function setup() {
   let canvasW = windowWidth * 0.5;
   let canvasH = windowHeight * 0.5;
@@ -15,16 +14,11 @@ function setup() {
 }
 
 
-// 把画布放到屏幕中间
 function centerCanvas() {
-  canva.position(
-    (windowWidth - width) / 2,
-    (windowHeight - height) / 2
-  );
+  canva.position(0, 0);
 }
 
-
-//创建草
+//create the grass
 function draw() {
   background(230);
 
@@ -99,7 +93,7 @@ function drawGrass() {
     push();
     translate(g.x, g.y);
 
-    stroke(40, 120, 50);
+    stroke(150, 160, 60);
     strokeWeight(2);
     noFill();
 
